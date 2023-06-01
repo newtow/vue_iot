@@ -95,41 +95,41 @@ export default {
     },
     autorender(){
       setInterval(() => {
-        axios.get('https://iot-backend-expressjs.vercel.app/pakan').then(response => (this.pakan = response.data.data));
-        axios.get('https://iot-backend-expressjs.vercel.app/pompa-1').then(response => (this.pompa = response.data.data));
-        axios.get('https://iot-backend-expressjs.vercel.app/pompa-2').then(response => (this.pompa2 = response.data.data));
-        axios.get('https://iot-backend-expressjs.vercel.app/waktu-pakan').then(response => (this.waktu_pakan = response.data.data));
+        axios.get('https://iot-backend-express-guppy.vercel.app/pakan').then(response => (this.pakan = response.data.data));
+        axios.get('https://iot-backend-express-guppy.vercel.app/pompa-1').then(response => (this.pompa = response.data.data));
+        axios.get('https://iot-backend-express-guppy.vercel.app/pompa-2').then(response => (this.pompa2 = response.data.data));
+        axios.get('https://iot-backend-express-guppy.vercel.app/waktu-pakan').then(response => (this.waktu_pakan = response.data.data));
       }, 1000);
     },
     sendmqtt(){
       
-      axios.post('https://iot-backend-expressjs.vercel.app/pakan')
+      axios.post('https://iot-backend-express-guppy.vercel.app/pakan')
       .then(response => (this.test = response.data.status))
       
       
   },
   pompa1on(){
       
-      axios.post('https://iot-backend-expressjs.vercel.app/pompa1-on')
+      axios.post('https://iot-backend-express-guppy.vercel.app/pompa1-on')
       .then(response => (this.test = response.data.status))
       
       
   },pompa1off(){
       
-      axios.post('https://iot-backend-expressjs.vercel.app/pompa1-off')
+      axios.post('https://iot-backend-express-guppy.vercel.app/pompa1-off')
       .then(response => (this.test = response.data.status))
       
       
   },pompa2on(){
       
-      axios.post('https://iot-backend-expressjs.vercel.app/pompa2-on')
+      axios.post('https://iot-backend-express-guppy.vercel.app/pompa2-on')
       .then(response => (this.test = response.data.status))
       
       
   },
 pompa2off(){
       
-      axios.post('https://iot-backend-expressjs.vercel.app/pompa2-off')
+      axios.post('https://iot-backend-express-guppy.vercel.app/pompa2-off')
       .then(response => (this.test = response.data.status))
       
       
