@@ -109,7 +109,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue';
         },
         methods: {
           sendtimer(){
-            axios.post('http://192.168.1.72:8000/timer', {jam1: this.jam1,menit1: this.menit1,jam2:this.jam2,menit2:this.menit2,jam3:this.jam3,menit3:this.menit3}).then((response) => {
+            axios.post('https://iot-backend-expressjs.vercel.app//timer', {jam1: this.jam1,menit1: this.menit1,jam2:this.jam2,menit2:this.menit2,jam3:this.jam3,menit3:this.menit3}).then((response) => {
             console.log(response);},
             (error) => {
             console.log(error);
@@ -117,7 +117,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue';
           },
           autorender(){
         setInterval(() => {
-        axios.get('http://192.168.1.72:8000/timer').then(response => (this.timer = response.data.data));
+        axios.get('https://iot-backend-expressjs.vercel.app//timer').then(response => (this.timer = response.data.data));
       }, 1000);
     },
         },
